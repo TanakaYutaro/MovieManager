@@ -35,4 +35,13 @@ describe "User" do
       expect(@user).not_to be_valid
     end
   end
+
+  describe "when name is too long" do
+    before do
+      @user.name = "a" * 51
+    end
+    it "shoud not be valid" do
+      expect(@user).not_to be_valid
+    end
+  end
 end
