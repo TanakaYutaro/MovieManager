@@ -18,6 +18,10 @@ describe "User" do
     expect(@user).to respond_to(:email)
   end
 
+  it "should response to 'password_digest'" do
+    expect(@user).to respond_to(:password_digest)
+  end
+
   describe "when name is not present" do
     before do
       @user.name = ""
